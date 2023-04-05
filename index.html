@@ -6,14 +6,31 @@
       #answer {
         opacity: 0;
         transition: opacity 2s ease;
+        display: none;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      #button-container {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <button onclick="showAnswer()">Show me the answer.</button>
-    <div id="answer"></div>
+    <div id="button-container">
+      <button onclick="showAnswer()">Show me the answer.</button>
+    </div>
+    <div id="answer-container">
+      <div id="answer"></div>
+    </div>
     <script>
       function showAnswer() {
+        var buttonContainer = document.getElementById("button-container");
+        buttonContainer.style.display = "none";
+        
+        var answerContainer = document.getElementById("answer-container");
+        answerContainer.style.display = "block";
+        
         var answer = document.getElementById("answer");
         answer.innerHTML = "This is the answer.";
         answer.style.opacity = 1;
