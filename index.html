@@ -48,7 +48,8 @@
         answerContainer.classList.add("show");
         
         var answer = document.getElementById("answer");
-        answer.innerHTML = "This is the answer.";
+        var messages = ["This is an answer.", "This is another answer.", "This is a third answer."];
+        answer.innerHTML = messages[Math.floor(Math.random() * messages.length)];
         
         setTimeout(function() {
           answerContainer.style.display = "flex";
