@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>The answer.</title>
+    <style>
+      #answer {
+        opacity: 0;
+        transition: opacity 2s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showAnswer()">Show me the answer.</button>
+    <div id="answer"></div>
+    <script>
+      function showAnswer() {
+        var answer = document.getElementById("answer");
+        answer.innerHTML = "This is the answer.";
+        answer.style.opacity = 1;
+      }
+    </script>
+  </body>
+</html>
